@@ -1,14 +1,15 @@
 package com.training.pom;
 
+import org.openqa.selenium.Alert;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPOM {
+public class TC022POM {
 	private WebDriver driver; 
 	
-	public LoginPOM(WebDriver driver) {
+	public TC022POM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
@@ -31,8 +32,11 @@ public class LoginPOM {
 	@FindBy(xpath ="//*[@id=\"tdContents\"]/table[1]/tbody/tr[2]/td/table/tbody/tr[2]/td[4]/img")
 	private WebElement ViewLnk;
 	
-	@FindBy(xpath ="//*[@id=\"backButton\"]")
-	private WebElement BackBtn;
+	@FindBy(id="amountText")
+	private WebElement amount; 
+	
+	@FindBy(xpath ="//*[@id=\"repayForm\"]/table/tbody/tr[3]/td/input")
+	private WebElement RepayBtn;
 	
 	
 	public void sendUserName(String userName) {
@@ -61,9 +65,20 @@ public class LoginPOM {
 		this.ViewLnk.click(); 
 	}
 	
-	public void clickBackBtn() {
-		this.BackBtn.click(); 
+	public void sendamount(String amount) {
+		this.amount.clear();
+		this.amount.sendKeys(amount);
 	}
+	
+
+	public void clickRepayBtn() {
+		this.RepayBtn.click();
+		Alert alert = driver.switchTo().alert();
+		alert.accept();
+		Alert alert2 = driver.switchTo().alert();
+		alert2.accept();
+	}
+	
 
 	public void clickPersonalLnk() {
 		// TODO Auto-generated method stub
@@ -79,5 +94,15 @@ public class LoginPOM {
 		// TODO Auto-generated method stub
 		
 	}
+
+	public void sendAmount(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+
+	
+
 }
 

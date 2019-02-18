@@ -5,10 +5,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
-public class LoginPOM {
+public class TC024POM {
 	private WebDriver driver; 
 	
-	public LoginPOM(WebDriver driver) {
+	public TC024POM(WebDriver driver) {
 		this.driver = driver; 
 		PageFactory.initElements(driver, this);
 	}
@@ -22,18 +22,14 @@ public class LoginPOM {
 	@FindBy(xpath ="//*[@id=\"cyclosLogin\"]/table/tbody/tr[3]/td/input")
 	private WebElement LoginBtn; 
 	
-	@FindBy(xpath ="//*[@id=\"menu2\"]/span[2]")
-	private WebElement AccountLnk; 
+	@FindBy(xpath ="//*[@id=\"menu1\"]/span[2]")
+	private WebElement PersonalLnk; 
 	
-	@FindBy(xpath ="//*[@id=\"submenu2.3\"]/span[2]")
-	private WebElement LoansLnk;
+	@FindBy(xpath ="//*[@id=\"submenu1.1\"]/span[2]")
+	private WebElement MessagesLnk;
 	
-	@FindBy(xpath ="//*[@id=\"tdContents\"]/table[1]/tbody/tr[2]/td/table/tbody/tr[2]/td[4]/img")
-	private WebElement ViewLnk;
-	
-	@FindBy(xpath ="//*[@id=\"backButton\"]")
-	private WebElement BackBtn;
-	
+	@FindBy(xpath ="//*[@id=\"tdContents\"]/form[2]/table[1]/tbody/tr[2]/td/table/tbody/tr[3]/td[3]/table/tbody/tr/td[2]/a")
+	private WebElement ViewMessagesLnk;
 	
 	public void sendUserName(String userName) {
 		this.userName.clear();
@@ -49,35 +45,19 @@ public class LoginPOM {
 		this.LoginBtn.click(); 
 	}
 	
-	public void clickAccountLnk() {
-		this.AccountLnk.click(); 
-	}
-	
-	public void clickLoansLnk() {
-		this.LoansLnk.click(); 
-	}
-
-	public void clickViewLnk() {
-		this.ViewLnk.click(); 
-	}
-	
-	public void clickBackBtn() {
-		this.BackBtn.click(); 
-	}
-
 	public void clickPersonalLnk() {
-		// TODO Auto-generated method stub
-		
+		this.PersonalLnk.click(); 
 	}
-
+	
 	public void clickMessagesLnk() {
-		// TODO Auto-generated method stub
-		
+		this.MessagesLnk.click(); 
 	}
 
 	public void clickViewMessagesLnk() {
-		// TODO Auto-generated method stub
-		
+		this.ViewMessagesLnk.click(); 
 	}
+	
+	
+	
 }
 
