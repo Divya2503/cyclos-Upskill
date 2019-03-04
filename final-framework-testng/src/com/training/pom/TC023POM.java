@@ -31,6 +31,7 @@ public class TC023POM {
 	
 	@FindBy(id="memberUsername")
 	private WebElement Recepient; 
+
 	
 
 	@FindBy(id="amount")
@@ -121,7 +122,7 @@ public class TC023POM {
 
 	public void clicMbrPaymentLnk() {
 		// TODO Auto-generated method stub
-		
+	
 	}
 
 	

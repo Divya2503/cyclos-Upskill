@@ -56,6 +56,51 @@ public class TC024POM {
 	public void clickViewMessagesLnk() {
 		this.ViewMessagesLnk.click(); 
 	}
+
+	public void clickUserandGroupsLnk() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void clickLoanGroupsLnk() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void clickSubmitBtn() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void sendloanGroup1(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void sendloanGroup2(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void clickSubmitBtn2() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void clickModifyLnk() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void sendMemberLogin(String string) {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void clickAddBtn() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 	
